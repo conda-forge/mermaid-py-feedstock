@@ -1,5 +1,5 @@
 {% set name = "mermaid-py" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mermaid_py-{{ version }}.tar.gz
-  sha256: dfe9b2bd92d3ad6f2944c64cc460aa9010660236c85b3ea0e5c1f53127900ecb
+  sha256: eb4ac05cb7e86a33f49e1f2d376b3b2817d5f59385f4faa3521897a6180f864f
 
 build:
   noarch: python
@@ -22,7 +22,6 @@ requirements:
   run:
     - python >=3.9.0,<4.0.0
     - requests >=2.31.0,<3.0.0
-    - ipython >=8.17.2,<9.0.0
 
 test:
   imports:
