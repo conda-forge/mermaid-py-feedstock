@@ -1,13 +1,13 @@
 {% set name = "mermaid-py" %}
-{% set version = "0.6.1" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mermaid_py-{{ version }}.tar.gz
-  sha256: 38cf1573b589772c0d6135044683bf44706f2ea9fcacfa573c337cbdc5d86f99
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mermaid_py-{{ version }}.tar.gz
+  sha256: f06a68573faf815861afe29e1621aca433cf718f066d6a2adcd554eeebe2e3b6
 
 build:
   noarch: python
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<4.0
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
-    - python >=3.9.0,<4.0.0
+    - python >={{ python_min }}
     - requests >=2.31.0,<3.0.0
 
 test:
@@ -30,6 +30,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://mermaidpy.vercel.app
