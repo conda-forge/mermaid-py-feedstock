@@ -3,7 +3,7 @@ About mermaid-py-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mermaid-py-feedstock/blob/main/LICENSE.txt)
 
-Home: https://mermaidpy.vercel.app
+Home: https://mermaidpy.vercel.app/
 
 Package license: MIT
 
