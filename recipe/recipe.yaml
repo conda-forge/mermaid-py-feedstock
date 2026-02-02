@@ -20,11 +20,18 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - poetry-core
     - pip
+    - setuptools
+    - wheel
   run:
     - python >=${{ python_min }}
-    - requests >=2.31.0,<3.0.0
+    - codecov >=2.1.13
+    - coverage >=7.10.7
+    - pre-commit >=4.3.0
+    - pytest >=8.4.2
+    - pytest-cov >=7.0.0
+    - requests >=2.32.5
+    - ruff >=0.14.14
 
 tests:
   - python:
