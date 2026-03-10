@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mermaid-py
-  version: "0.8.3"
+  version: "0.8.4"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mermaid_py-${{ version }}.tar.gz
-  sha256: 6b4263aa10121d80dab8cb0094ae1206897a968e419ad2fdd698a6cc55c40882
+  sha256: 4676246ad32c4e9206d60af569f68ba7eab81e425d071fba01355b1cc6bba8f5
 
 build:
   number: 0
