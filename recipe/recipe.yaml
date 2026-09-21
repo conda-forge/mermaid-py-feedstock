@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mermaid-py
-  version: "0.8.4"
+  version: "0.9.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mermaid_py-${{ version }}.tar.gz
-  sha256: 4676246ad32c4e9206d60af569f68ba7eab81e425d071fba01355b1cc6bba8f5
+  sha256: 35080d4fed4680a4d598e8e2da967ba96d175b564f9101f46915fef273d14dbd
 
 build:
   number: 0
@@ -25,20 +25,16 @@ requirements:
     - wheel
   run:
     - python >=${{ python_min }}
-    - codecov >=2.1.13
-    - coverage >=7.10.7
-    - pre-commit >=4.3.0
-    - pytest >=8.4.2
-    - pytest-cov >=7.0.0
     - requests >=2.32.5
-    - ruff >=0.14.14
 
 tests:
   - python:
       imports:
         - mermaid
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: A simple interface for the the famous lib mermaid-js to create diagrams.
