@@ -38,7 +38,9 @@ tests:
       imports:
         - mermaid
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: A simple interface for the the famous lib mermaid-js to create diagrams.
